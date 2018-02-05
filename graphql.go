@@ -120,6 +120,7 @@ func (c *Client) Run(ctx context.Context, req *Request, resp interface{}) error 
 	}
 	r.Header.Set("Content-Type", writer.FormDataContentType())
 	r.Header.Set("Accept", "application/json")
+	r.Header.Set("Authorization", "Bearer 7682-human:422c17bf-eb94-4643-89c3-282ee21812de-178c4398-1809-4bfe-8d3c-0aa8b7045f8e")
 	r = r.WithContext(ctx)
 	res, err := c.httpClient.Do(r)
 	if err != nil {
